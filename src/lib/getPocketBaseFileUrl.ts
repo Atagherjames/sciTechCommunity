@@ -9,5 +9,9 @@ export function getPocketBaseFileUrl({
   filename,
   collectionName,
 }: TFile): string {
-  return `${import.meta.env.VITE_API_BASE_URL}/api/files/${collectionName}/${recordId}/${filename}`;
+  if (!filename) return "";
+  if (filename.startsWith("http://") || filename.startsWith("https://")) {
+    return filename;
+  }
+  return ${import.meta.env.VITE_API_BASE_URL}/api/files///;
 }
