@@ -6,8 +6,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:all": "concurrently \"npm run dev\" \"npm run dev:server\"",
-    "dev:server": "npm run dev --prefix server",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -70,3 +68,4 @@
     "vite": "^6.0.5"
   }
 }
+
